@@ -1,0 +1,46 @@
+---
+title : Tulsi's Blog
+layout : "base.njk"
+---
+
+<!-- Hero Section -->
+<section class="hero-section" id="home">
+    <div class="cover" id="hero-section"></div>
+    <div class="contentBx">
+        <h2>Tulsi's Blog</h2>
+        <h3>A Minimalistic Blog</h3>
+        <div class="buttons-div">
+            <button class="button" id="featured" onclick="scrollToSection('#post-section');">featured</button>
+            <a href="/posts/" class="button" id="all-posts">all posts</a>
+        </div>
+    </div>
+    <div class="scroll-down-indictaor" onclick="scrollToSection('#post-section');">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="58.45px" height="33.45px"
+            viewBox="0 0 1169.000000 669.000000" preserveAspectRatio="xMidYMid meet">
+        
+        <g transform="translate(0.000000,669.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
+            <path d="M680 6656 c-161 -37 -285 -103 -404 -215 -293 -278 -341 -729 -113
+        -1071 41 -63 5128 -5151 5203 -5205 74 -54 187 -108 274 -132 48 -13 102 -18
+        210 -18 108 0 162 5 210 18 82 22 192 74 267 125 70 49 5167 5147 5210 5212
+        133 200 177 445 119 672 -63 247 -225 443 -459 554 -120 56 -184 69 -347 69
+        -108 0 -162 -5 -210 -18 -76 -21 -190 -73 -257 -118 -27 -17 -1057 -1040
+        -2291 -2273 l-2242 -2241 -2243 2241 c-1233 1233 -2263 2256 -2290 2273 -65
+        44 -180 97 -252 117 -79 22 -309 28 -385 10z" />
+        </g>
+    </svg>
+    </div>
+</section>
+<main>
+    <!-- Featured Posts -->
+    <section class="post-section" id="post-section">
+        <div class="post-section-heading flex-center">
+            <h2>Featured Posts</h2>
+        </div>
+        {%- for post in collections.featured -%}
+            {% include 'article-snippet.njk' %}
+        {%- endfor -%}
+        <div class="next-page-button flex-center">
+            <a href="/posts/" class="button">More Posts</a>
+        </div>
+    </section>
+</main>

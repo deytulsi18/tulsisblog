@@ -1,0 +1,15 @@
+---
+title : All Posts
+layout : 'posts.njk'
+--- 
+
+<main>
+  <section class="post-section" id="post-section">
+     <div class="post-section-heading flex-center">
+      <h2>All Posts</h2>
+    </div>
+    {%- for post in collections.post | reverse -%}
+      {% include 'article-snippet.njk' %}
+    {%- endfor -%}
+  </section>
+</main>

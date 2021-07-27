@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <link id="theme-style" rel="stylesheet" type="text/css" href="">
+        <link rel="stylesheet" href="/css/contact.css">
+        <link rel="icon" href="/img/kt-logo.png" id="icon">
+        <title>Tulsi's Blog | {{ title }}</title>
+    </head>
+    <body>
+        {% include 'header.njk' %}
+        {{ content | safe }}
+        {% include 'footer.njk' %}
+        <script>
+            function successToast() {
+                var x = document.getElementById("toast")
+                x.className = "show";
+                setTimeout(function () {
+                    x.className = x.className.replace("show", "");
+                }, 2500);
+            }
+            function failureToast() {
+                var x = document.getElementById("toast-red")
+                x.className = "show";
+                setTimeout(function () {
+                    x.className = x.className.replace("show", "");
+                }, 2500);
+            }
+            function validateEmail() {
+                let email = document.getElementById('email').value;
+                if (! email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+                    alert("Please enter a correct email address");
+                    return false;
+                }
+                return true;
+            }
+            function validateForm() {
+                if (! validateEmail()) {
+                    failureToast();
+                    document.querySelector('#response-form').reset();
+                    return false;
+                } else {
+                    submitted = true;
+                    successToast();
+                    return true;
+                }
+            }
+        </script>
+        <script src="/js/script.js"></script>
+    </body>
+</html>

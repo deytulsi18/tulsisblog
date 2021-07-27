@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <link id="theme-style" rel="stylesheet" type="text/css" href="">
+        <link rel="icon" href="/img/kt-logo.png" id="icon">
+        <title>{{ title }}</title>
+        <style>
+            .disable-scroll {
+                overflow: hidden;
+            }
+        </style>
+        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </head>
+    <body>
+        
+        <!-- Preloader -->
+        <div id="loader">
+            <div class="pre-loader"></div>
+        </div>
+        
+        <script>
+            if (!sessionStorage.getItem('doNotShow')) {
+                document
+                    .querySelector('body')
+                    .classList
+                    .add('disable-scroll');
+            }
+        </script>
+
+        <!-- Scroll To Top Button -->
+        <div class="scrollTop" onclick="scrollToTop();"></div>
+
+        {% include 'header.njk' %}
+
+        {{ content | safe }}
+
+        {% include 'footer.njk' %}
+
+        <!-- Preloader -->
+        <script>
+            window.addEventListener('load', () => {
+                if (!sessionStorage.getItem('doNotShow')) {
+                    setInterval(() => {
+                        document
+                            .querySelector('#loader')
+                            .style
+                            .display = 'none';
+                        document
+                            .querySelector('body')
+                            .classList
+                            .remove('disable-scroll');
+                    }, 2500);
+                    sessionStorage.setItem('doNotShow', true);
+                } else {
+                    document
+                        .querySelector('#loader')
+                        .style
+                        .display = 'none';
+                    document
+                        .querySelector('body')
+                        .classList
+                        .remove('disable-scroll');
+                }
+            });
+        </script>
+
+        <!-- Scroll To Top -->
+        <script>
+            window.addEventListener('scroll', () => {
+                let scroll = document.querySelector('.scrollTop');
+                scroll.classList.toggle('active', window.scrollY > 500);
+            });
+            function scrollToTop(params) {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        </script>
+        
+        <script>
+            // scroll to specific section
+            function scrollToSection(id) {
+                document.querySelector(id).scrollIntoView();
+            }
+        </script>
+
+        <script src="/js/script.js"></script>
+
+        <script>
+            if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                });
+            }
+            });
+        }
+        </script>
+    </body>
+</html>

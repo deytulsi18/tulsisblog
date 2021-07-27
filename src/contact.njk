@@ -1,0 +1,44 @@
+---
+title : Contact
+layout : 'contact.njk'
+--- 
+<main>
+    <section class="contact-section">
+        <h2 class="contact-title">Your Response</h2>
+        <script>
+            let submitted = false;
+        </script>
+        <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display:none;"
+            onload="if(submitted) {document.querySelector('#response-form').reset();}"></iframe>
+        <form
+            id="response-form"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSek6qpNYZg7yOU6l7Hikz_x861tMBWobcNM8FJZwZhBST3TVA/formResponse"
+            method="post"
+            class="contact-form"
+            target="hidden_iframe"
+            onsubmit="return validateForm();"
+            autocomplete="off">
+            <input type="text" placeholder="Your Name" required="required" name="entry.1422699977" id="name"/>
+            <br>
+            <input type="email" placeholder="Your Email" required="required" name="emailAddress" id="email"/>
+            <br>
+            <textarea
+                type="text"
+                placeholder="Write your message here..."
+                required="required"
+                name="entry.458738633"
+                style="height:200px"
+                id="message"></textarea>
+            <br>
+            <input type="submit" class="submit" value="Submit"></form>
+            <div id="toast">
+                <div id="toast-message">Succesfully Sent!</div>
+            </div>
+            <div id="toast-red">
+                <div id="toast-message">Form not submitted!</div>
+            </div>
+    </section>
+</main>

@@ -1,0 +1,14 @@
+<div class="post" id="post-01">
+    <div class="post-heading">
+        <h2>{{ post.data.title }}</h2>
+        <span class="date">{{ post.date | postDate}}</span>
+    </div>
+    <div class="post-content">
+        <p>
+            {{ post.data.description }}
+        </p>
+    </div>
+    <div class="flex">
+        <a href="{{ post.url }}" class="continue-reading button">Read More</a>
+    </div>
+</div>
