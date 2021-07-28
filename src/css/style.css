@@ -63,10 +63,11 @@ body {
   background-color: #888;
   font-family: "Poppins", sans-serif;
   transition: 0.3s;
+  font-size: 100%;
 }
 
 p a,
-li a{
+li a {
   color: rgb(212, 97, 3);
 }
 p a:visited,
@@ -212,7 +213,8 @@ li a:visited {
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0);
   }
   50% {
@@ -243,6 +245,7 @@ header {
   background-color: var(--hd-tp-color);
   z-index: 1000;
   transition: 0.3s;
+  min-height: 7.5%;
 }
 header.sticky {
   background-color: var(--header-bg-color);
@@ -256,7 +259,7 @@ header.active {
   display: inline-block;
   color: #ff6700;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 175%;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   letter-spacing: 10px;
@@ -268,6 +271,7 @@ header.active {
   color: #eee;
   cursor: pointer;
   display: block;
+  transform: scale(1);
 }
 
 .bar1,
@@ -411,7 +415,7 @@ header.active {
 }
 .navigation li a {
   color: var(--text-color);
-  font-size: 2em;
+  font-size: 200%;
   letter-spacing: 4px;
   display: inline-block;
   font-weight: 600;
@@ -463,14 +467,14 @@ section {
   border-radius: 10px;
 }
 .hero-section .contentBx h2 {
-  font-size: 5rem;
+  font-size: 700%;
   letter-spacing: 2px;
   text-align: center;
   font-family: "Allura", cursive;
   font-weight: 100;
 }
 .hero-section .contentBx h3 {
-  font-size: 24px;
+  font-size: 200%;
   font-weight: 500;
   letter-spacing: 4px;
   text-align: center;
@@ -504,6 +508,7 @@ section {
   border: 2px solid #ddd;
   margin-right: 0.5rem;
   transition: 0.3s;
+  font-size: 150%;
 }
 #featured:hover {
   border: 2px solid #fac157;
@@ -514,6 +519,7 @@ section {
   margin-left: 0.5rem;
   border: 2px solid #ddd;
   transition: 0.3s;
+  font-size: 150%;
 }
 #all-posts:hover {
   color: #000;
@@ -545,16 +551,16 @@ section {
   margin-bottom: 4rem;
 }
 .post-section-heading h2 {
-  font-size: 1.75em;
+  font-size: 175%;
 }
 .full-post-heading h2 {
-  font-size: 1.75rem;
+  font-size: 175%;
 }
 .post-section {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: "Open Sans", sans-serif;
-  font-size: 1.25em;
+  font-size: 125%;
   line-height: 1.5em;
 }
 .post {
@@ -567,7 +573,7 @@ section {
   margin-bottom: 2rem;
 }
 .post-heading h2 {
-  font-size: 1.5em;
+  font-size: 150%;
 }
 .post-heading .date {
   display: block;
@@ -575,7 +581,7 @@ section {
   color: var(--orange-text);
   font-family: "Poppins", san-serif;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 125%;
 }
 .post-content {
   margin-bottom: 1rem;
@@ -598,10 +604,10 @@ footer {
   padding: 1em;
   background-color: var(--footer-bg-color);
   color: var(--orange-text);
-  font-size: large;
+  font-size: 120%;
 }
 .mail {
-  font-size: 1em;
+  font-size: 100%;
   padding: 1rem 0 1.5rem 0;
 }
 .mail a {
@@ -613,7 +619,7 @@ footer {
 }
 .copyRightText {
   font-family: "Poppins", sans-serif;
-  font-size: 1.25em;
+  font-size: 125%;
   font-weight: 100;
 }
 
@@ -622,9 +628,13 @@ footer {
 @media (max-width: 750px) {
   header {
     padding: 0.625em 1em;
+    min-height: 7.5%;
   }
   header.sticky {
     padding: 0.625em 1em;
+  }
+  .menuToggle {
+    transform: scale(0.9);
   }
   section {
     padding: 2rem;
