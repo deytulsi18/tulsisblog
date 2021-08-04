@@ -530,6 +530,8 @@ section {
   color: #000;
   border: 2px solid #fac157;
   background-color: #fac157;
+  border: 2px solid rgb(255, 140, 0);
+  background-color: rgb(255, 140, 0);
 }
 .continue-reading:hover {
   border: 2px solid var(--text-color);
