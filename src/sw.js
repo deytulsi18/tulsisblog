@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v1.0';
-const dynamicCacheName = 'site-dynamic-v1.0';
+const staticCacheName = 'site-static-v1';
+const dynamicCacheName = 'site-dynamic-v1';
 const assets = [
     '/',
     '/index.html',
@@ -53,19 +53,24 @@ self.addEventListener('fetch', evt => {
     evt.respondWith(
         caches.match(evt.request)
             .then(cacheRes => {
-                return fetch(evt.request)
-                    .then(fetchRes => {
-                        return caches.open(dynamicCacheName)
-                            .then(cache => {
-                                cache.put(evt.request.url, fetchRes.clone());
-                                // check cached items size
-                                limitCacheSize(dynamicCacheName, 15);
-                                return fetchRes;
-                            })
-                    })
-                    .catch(() => {
-                        return cacheRes || caches.match('/offline.html');
-                    })
+                if (evt.request.url.indexOf('.woff2') == -1) {
+                    return fetch(evt.request)
+                        .then(fetchRes => {
+                            return caches.open(dynamicCacheName)
+                                .then(cache => {
+                                    cache.put(evt.request.url, fetchRes.clone());
+                                    // check cached items size
+                                    limitCacheSize(dynamicCacheName, 15);
+                                    return fetchRes;
+                                })
+                        })
+                        .catch(() => {
+                            return cacheRes || caches.match('/offline.html');
+                        })
+                }
+                else {
+                    return cacheRes;
+                }
             })
     );
 });
