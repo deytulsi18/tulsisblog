@@ -4,10 +4,9 @@ description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.
   Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae
   delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio
   aliquam. "
+date: 2021-07-26
 tags:
   - post
-  - featured
-date: 2021-07-26
 ---
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, id sunt sit illo nostrum ea praesentium reiciendis odit aliquid atque rem facilis distinctio! Quo corrupti labore, cupiditate aliquam dolore porro nesciunt placeat ex unde deleniti odio iure obcaecati beatae nam libero veniam natus reiciendis temporibus minima at nostrum totam tenetur voluptatum! Facere impedit dolores, quibusdam reiciendis, accusantium ducimus maiores aperiam, consequatur magnam architecto laboriosam quos laudantium porro perspiciatis! Corrupti quisquam facere voluptatibus velit ratione dolorum temporibus aspernatur iusto dolor doloribus! Magni laborum dicta repellendus veniam mollitia. Illum voluptatem tempore aspernatur odit obcaecati tenetur aut dignissimos veniam? Delectus numquam totam dolor.\
 \
