@@ -1,6 +1,6 @@
 ---
 title: Functions and Applications of ChatGPT
-description: A post abou the list of possibilities with chatgpt...
+description: A post about the list of possibilities with ChatGPT.
 date: 2024-06-19T17:50:30.310Z
 tags:
   - post
