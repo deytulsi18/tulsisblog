@@ -36,7 +36,7 @@ layout : "base.njk"
         <div class="post-section-heading flex-center">
             <h2>Featured Posts</h2>
         </div>
-        {%- for post in collections.featured -%}
+        {%- for post in collections.featured | reverse  -%}
             {% include 'article-snippet.njk' %}
         {%- endfor -%}
         <div class="next-page-button flex-center">
