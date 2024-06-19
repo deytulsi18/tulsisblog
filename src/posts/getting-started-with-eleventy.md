@@ -8,16 +8,14 @@ tags:
 ---
 <!--StartFragment-->
 
-# Getting Started with Eleventy
-
+# Getting Started with Eleventy<br><br>
 Eleventy (or 11ty) is a simple, static site generator designed to be an alternative to Jekyll. It’s written in JavaScript and allows you to create websites quickly by converting templates into static HTML. Here’s a step-by-step guide to getting started with Eleventy:
-
-## Prerequisites
+<br><br>
+## Prerequisites<br><br>
 - Basic knowledge of HTML, CSS, and JavaScript.
 - Node.js and npm installed on your machine.
-
-## Step 1: Setting Up Your Project
-
+<br><br>
+## Step 1: Setting Up Your Project<br><br>
 1. **Create a New Project Directory**
     ```bash
     mkdir my-eleventy-site
@@ -33,9 +31,8 @@ Eleventy (or 11ty) is a simple, static site generator designed to be an alternat
     ```bash
     npm install @11ty/eleventy --save-dev
     ```
-
-## Step 2: Create Basic Files
-
+<br><br>
+## Step 2: Create Basic Files<br><br>
 1. **Create a Basic HTML File**
     - Inside your project directory, create a folder named `src`.
     - In the `src` folder, create an `index.html` file with the following content:
@@ -52,9 +49,8 @@ Eleventy (or 11ty) is a simple, static site generator designed to be an alternat
         </body>
         </html>
         ```
-
-## Step 3: Configure Eleventy
-
+<br><br>
+## Step 3: Configure Eleventy<br><br>
 1. **Create an Eleventy Configuration File**
     - Create a file named `.eleventy.js` in the root of your project directory with the following content:
         ```js
@@ -67,9 +63,8 @@ Eleventy (or 11ty) is a simple, static site generator designed to be an alternat
             };
         };
         ```
-
-## Step 4: Build and Serve Your Site
-
+<br><br>
+## Step 4: Build and Serve Your Site<br><br>
 1. **Add Scripts to `package.json`**
     - Open your `package.json` and add the following scripts:
         ```json
@@ -78,25 +73,25 @@ Eleventy (or 11ty) is a simple, static site generator designed to be an alternat
             "serve": "eleventy --serve"
         }
         ```
-
+<br><br>
 2. **Build Your Site**
     ```bash
     npm run build
     ```
 
     - This command will generate a `_site` directory with your static HTML files.
-
+<br><br>
 3. **Serve Your Site**
     ```bash
     npm run serve
     ```
 
     - This command will start a local development server. You can view your site by navigating to `http://localhost:8080` in your web browser.
-
+<br><br>
 ## Step 5: Using Templates and Data
-
+<br><br>
 Eleventy supports various templating languages such as Nunjucks, Liquid, Markdown, and more.
-
+<br><br>
 1. **Using Markdown**
     - Create a `src/posts` folder and add a markdown file `hello-world.md`:
         ```markdown
@@ -111,7 +106,7 @@ Eleventy supports various templating languages such as Nunjucks, Liquid, Markdow
         ```
 
     - Eleventy will automatically process this markdown file and convert it to HTML.
-
+<br><br>
 2. **Using Layouts**
     - Create a `src/_includes` folder.
     - In the `_includes` folder, create a file `base.njk` (Nunjucks template):
@@ -146,15 +141,14 @@ Eleventy supports various templating languages such as Nunjucks, Liquid, Markdow
 
         This is my first blog post using Eleventy.
         ```
-
-## Step 6: Customize and Extend
-
+<br><br>
+## Step 6: Customize and Extend<br><br>
 - Explore more Eleventy features like collections, custom filters, shortcodes, and plugins to customize and extend your site’s functionality.
-
-## Resources
+<br><br>
+## Resources<br><br>
 - [Eleventy Documentation](https://www.11ty.dev/docs/)
 - [Eleventy GitHub Repository](https://github.com/11ty/eleventy)
-
+<br><br>
 With these steps, you should have a basic Eleventy site up and running. From here, you can explore more advanced features and customize your site to fit your needs.
 
 
